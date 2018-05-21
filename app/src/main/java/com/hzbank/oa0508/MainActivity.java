@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        };
 //        countDownTimer.start();
-        Toast.makeText(this,"动态部署测试成功",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"动态部署测试成功",Toast.LENGTH_SHORT).show();
         toMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,5 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Toast.makeText(this,"热修复测试",Toast.LENGTH_SHORT).show();
     }
 }

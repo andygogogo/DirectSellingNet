@@ -282,6 +282,11 @@ public class EmasInit {
 //        }
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     private static void initZcache(Application application, String appkey, String appversion, String prefix) {
         ZCacheConfigManager.setConfigOrigin(ConfigOrigin.MTOP);
         ZCache.setEnv(EnvEnum.DAILY);
