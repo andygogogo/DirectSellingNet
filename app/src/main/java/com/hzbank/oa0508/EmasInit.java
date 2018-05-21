@@ -18,7 +18,7 @@ import com.alibaba.sdk.android.push.CloudPushService;
 import com.alibaba.sdk.android.push.CommonCallback;
 import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
 import com.hzbank.dsweex.WeexCrashListener;
-import com.hzbank.dsweex.adapter.FrescoImageAdapter;
+import com.hzbank.dsweex.adapter.ImageAdapter;
 import com.hzbank.dsweex.adapter.JSExceptionAdapter;
 import com.hzbank.dsweex.adapter.WXUserTrackAdapter;
 import com.hzbank.dsweex.adapter.ZcacheHttpAdapter;
@@ -83,15 +83,15 @@ public class EmasInit {
 
     /*配置信息*/
 //    protected String mAppkey = "10000039";//"10000066";//"10000039";//"10000078";//"60039748";
-    protected String mAppkey = "20000019";//"10000066";//"10000039";//"10000078";//"60039748";
-    protected String mAppSecret = "c7795717b2306055f21fb33418c1d011";//"1426c10c5ce57d6cb29e016a816421a7";//"c7795717b2306055f21fb33418c1d011";//"2e00a7e9ab2048daabd4977170d37c4a";//"ab5ff148782b467bb0b310c4acd70abd"//"fe240d4b8f4b31283863cc9d707e2cb1"
+    protected String mAppkey = "20000176";//"10000066";//"10000039";//"10000078";//"60039748";
+    protected String mAppSecret = "cab50e1b7eacb09af0372d6a6639f83e";//"1426c10c5ce57d6cb29e016a816421a7";//"c7795717b2306055f21fb33418c1d011";//"2e00a7e9ab2048daabd4977170d37c4a";//"ab5ff148782b467bb0b310c4acd70abd"//"fe240d4b8f4b31283863cc9d707e2cb1"
 //    protected String mZcachePrefix = "http://mobilehubdev.taobao.com/eweex/";
-    protected String mZcachePrefix = "http://emas-ha-remote-log-poc.oss-cn-beijing.aliyuncs.com/eweex/";
-    protected String mAccsHost = "acs.emas-ha.cn";
+    protected String mZcachePrefix = "http://publish-poc.emas-ha.cn/eweex/";
+    protected String mAccsHost = "emaspoc-acs.emas-ha.cn";
     protected Map<String, String> mIPStrategy;
-    protected String mMtopHost = "aserver.emas-ha.cn";
-    protected String mAdashHost = "adash.emas-ha.cn";
-    protected String mHAOssBucket = "ha-remote-log";
+    protected String mMtopHost = "emaspoc-aserver.emas-ha.cn";
+    protected String mAdashHost = "emaspoc-adash.emas-ha.cn";
+    protected String mHAOssBucket = "emas-ha-remote-log-poc";
     protected String mHAPubKey;
     protected String mStartActivity = "com.taobao.demo.WelcomActivity";
     protected String mTTid = "1001@DemoApp_Android_" + BuildConfig.VERSION_NAME;
@@ -102,6 +102,18 @@ public class EmasInit {
 
     private Application mApplication;
     private static final String TAG = "EmasInit";
+
+//    protected String mCacheURL = "http://publish-poc.emas-ha.cn/eweex/";
+//    protected String mACCSDoman = "emaspoc-acs.emas-ha.cn";
+//    protected Map<String, String> mIPStrategy;
+//    protected String mMTOPDoman = "emaspoc-aserver.emas-ha.cn";
+//    protected String mHAUniversalHost = "emaspoc-adash.emas-ha.cn";
+//    protected String mHAOSSBucketName = "emas-ha-remote-log-poc";
+//    protected String mHARSAPublicKey;
+//    protected String mStartActivity = "com.taobao.demo.WelcomActivity";
+//    protected String mChannelID = "1001@DemoApp_Android_" + BuildConfig.VERSION_NAME;
+//    protected String PUSH_TAG = "POC";
+//    protected boolean mUseHttp = true;
 
     public EmasInit(Application application) {
         this.mApplication = application;
@@ -253,8 +265,8 @@ public class EmasInit {
 
         // weex
         InitConfig config = (new InitConfig.Builder())
-//                .setImgAdapter(new ImageAdapter())
-                .setImgAdapter(new FrescoImageAdapter())
+                .setImgAdapter(new ImageAdapter())
+//                .setImgAdapter(new FrescoImageAdapter())
                 .setHttpAdapter(new ZcacheHttpAdapter())
                 .setUtAdapter(new WXUserTrackAdapter())
                 .setJSExceptionAdapter(new JSExceptionAdapter(mApplication))

@@ -121,7 +121,7 @@ dependencies {
 
     /************WEEX SDK START**********/
     compile ("com.taobao.android:weex_sdk:0.17.9-new-measurement-1") { transitive true }
-    compile('com.taobao.android:zcache:0.1.1-proguard') { transitive true }
+    compile('com.taobao.android:zcache:0.1.2-open') { transitive true }
     compile('com.alibaba.mtl:dynamicConfig:0.1.0.10') { transitive true }
     compile('com.alibaba.mtl:dynamicconfigadapter:0.1.0.10') { transitive true }
     compile('com.android.support:recyclerview-v7:26.+') { transitive true }
@@ -131,7 +131,7 @@ dependencies {
 
     //Weex module
 //    compile("com.taobao.emas.weex:weex:1.0.0.3-ds-SNAPSHOT@aar") { 加载本地js
-    compile("com.hzbank.android:dsweex:1.0.0.0-dsweex-SNAPSHOT@aar") {//加载网络js，测试zcache
+    compile("com.hzbank.android:dsweex:1.0.0.1-dsweex-SNAPSHOT@aar") {//加载网络js，测试zcache
         transitive true
         exclude group: 'com.alibaba.mtl', module: 'dynamicConfig'
         exclude group: 'com.alibaba.mtl', module: 'dynamicconfigadapter'
