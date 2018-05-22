@@ -58,6 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(this,"热修复测试",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, BuildConfig.VERSION_NAME, Toast.LENGTH_SHORT).show();
     }
 }
