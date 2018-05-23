@@ -3,7 +3,7 @@
     {
       "artifact": "DSLoginBundle",
       "type": "awb",
-      "version": "1.0.3-SNAPSHOT",
+      "version": "1.0.0-SNAPSHOT",
       "group": "com.hzbank.android"
     }
   ],
